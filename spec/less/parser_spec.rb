@@ -155,7 +155,7 @@ describe Less::Parser do
       end
 
       it "#{base_name}.less" do
-        parser = Less::Parser.new(:filename => less_file, :paths => [ File.dirname(less_file) ])
+        parser = Less::Parser.new(:filename => less_file, :relativeUrls => true, :paths => [ File.dirname(less_file) ])
         less = parser.parse( less_content )
         less.to_css(:strictMath => true, :silent => true).should == File.read(css_file)
       end
