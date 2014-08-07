@@ -2,7 +2,7 @@ module Less
   module Defaults
 
     def defaults
-      @defaults ||= { :paths => [], :relativeUrls => true, :syncImport => true }
+      @defaults ||= { :paths => [], :syncImport => true }
     end
 
     def paths
